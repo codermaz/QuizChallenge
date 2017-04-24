@@ -1,0 +1,107 @@
+html, body { 
+	background: LightGray;
+}
+
+div {
+	padding: 10px 10px;
+	font-family: "Helvetica";
+	font-weight: bold;
+	color: #777;
+}
+
+.container { 
+	background-color: #fff;
+	width: 800px;
+	height: 600px;
+	margin: auto;
+	border-top-width: 3px;
+	border-top-style: solid;
+	border-top-color: red;
+	position:relative;
+}
+
+.header { 
+	width: auto;
+	height: 3%;
+	margin: 10px 20px;
+	border: 2px solid blue; 
+}
+ 
+/* table Login, Catalogs & Highscore */
+.center {
+	width: 100%;	
+	height: 60%;
+	margin-bottom: 30px; 
+	margin-left: 0;
+ 	border-spacing: 20px 10px;
+ 	table-layout: fixed;
+}
+
+.left {
+	width: 60%;
+	border: 2px solid green;
+	border-radius: 10px;		
+	background-color: #efefef; 
+}
+
+.form_login {
+	color: DarkGray;
+}
+
+.ul_login {
+	list-style-type: none;
+	left: %25;
+}
+
+.right_up {
+    height: 35%;
+    border: 2px solid green; 
+	background-color: #fff;
+	overflow-x: scroll;
+}
+
+.table_catalogs {
+	width: 100%;
+	border-spacing: 3px 10px;
+	table-layout: fixed;
+}
+
+.table_catalogs td {
+	height: 40px;
+	background-color: #efefef; 
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.right_down {
+	height: 25%;
+	border: 2px solid green; 
+	background-color: #fff;
+	max-height: 120px;
+	overflow-x: scroll;
+}
+
+.table_highscore {
+	width: 100%;
+	border-spacing: 1px 1px;
+	text-align: center;
+	table-layout: fixed;
+}
+.table_highscore th {
+    color: white;
+    background-color: #333;
+}
+.table_highscore tr:nth-child(even) {
+    background-color: #eee;
+}
+.table_highscore tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.footer {
+	width: auto;
+	height: 3%;
+	margin: 10px 20px;
+	border: 2px solid black; 
+	font-family: monospace;
+}
