@@ -50,7 +50,9 @@ div {
 
 .ul_login {
 	list-style-type: none;
-	left: 200px;
+	position: absolute;
+	left: 100px;
+	top: 200px;
 }
 
 .right_up {
