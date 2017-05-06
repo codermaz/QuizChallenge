@@ -4,12 +4,12 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title> Quiz Challenge </title>
-		<link rel="stylesheet" type="text/css" href="quiz.css">
-		<script language="JavaScript" src="move.js"></script>
+		<link rel="stylesheet" type="text/css" href="Quiz.css">
+		<script src="Quiz.js"></script>
 
 	</head>
 
-	<body>
+	<body onload="init();">
 		<div class="container">
 
 			<div class="header">
@@ -20,16 +20,16 @@
 				<tr>
 					<td class="left" rowspan="2">
 					<div>
-						<form class="form_login" action="login.php" method="get">
+						<form class="form_login" method="get">
 							<ul class="ul_login">
 								<li>
 									Username
 								</li>
 								<li>
-									<input type="text" name="username" />
+									<input type="text" name="username" id="txtLogin"/>
 								</li>
 								<li>
-									<input type="submit" value="Login" />
+									<input type="submit" value="Login" id="btnLogin"/>
 								</li>
 							</ul>
 						</form>
