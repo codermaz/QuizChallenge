@@ -1,4 +1,4 @@
-html, body { 
+html, body {
 	background: Gray;
 }
 
@@ -9,7 +9,7 @@ div {
 	color: #777;
 }
 
-.container { 
+.container {
 	background-color: #fff;
 	width: 800px;
 	height: 600px;
@@ -17,24 +17,24 @@ div {
 	border-top-width: 3px;
 	border-top-style: solid;
 	border-top-color: red;
-	position:relative;
+	position: relative;
 }
 
-.header { 
+.header {
 	width: auto;
 	height: 3%;
 	margin: 10px 20px;
 	margin-top: 20px;
-	border: 2px solid black; 
+	border: 2px solid black;
 	position: relative;
 }
 
 #scrollBox {
-    padding: 0;
+	padding: 0;
 	position: absolute;
 	top: -24px;
-	left: 39%;
-	border: 2px solid black; 
+	left: 37%;
+	border: 2px solid black;
 	width: 14em;
 	height: 20px;
 	border-top-left-radius: 10px;
@@ -46,22 +46,22 @@ div {
 	position: absolute;
 	top: -15px;
 }
- 
+
 /* table Login, Catalogs & Highscore */
 .center {
-	width: 100%;	
+	width: 100%;
 	height: 60%;
-	margin-bottom: 30px; 
+	margin-bottom: 30px;
 	margin-left: 0;
- 	border-spacing: 20px 10px;
- 	table-layout: fixed;
+	border-spacing: 20px 10px;
+	table-layout: fixed;
 }
 
 .left {
 	width: 60%;
 	border: 2px solid green;
-	border-radius: 10px;		
-	background-color: #efefef; 
+	border-radius: 10px;
+	background-color: #efefef;
 }
 
 .form_login {
@@ -76,8 +76,8 @@ div {
 }
 
 .right_up {
-    height: 35%;
-    border: 2px solid green; 
+	height: 200px;
+	border: 2px solid green;
 	background-color: #fff;
 	overflow-x: scroll;
 }
@@ -90,17 +90,22 @@ div {
 
 .table_catalogs td {
 	height: 40px;
-	background-color: #efefef; 
+	background-color: #efefef;
 	padding-left: 1em;
 	padding-right: 1em;
 }
 
 .right_down {
-	height: 25%;
-	border: 2px solid green; 
+	height: 200px;
+	border: 2px solid green;
 	background-color: #fff;
 	max-height: 120px;
 	overflow-x: scroll;
+}
+
+h3 {
+	padding: 0px;
+	margin: 3px;
 }
 
 .table_highscore {
@@ -110,20 +115,24 @@ div {
 	table-layout: fixed;
 }
 .table_highscore th {
-    color: white;
-    background-color: #333;
+	color: white;
+	background-color: #333;
 }
 .table_highscore tr:nth-child(even) {
-    background-color: #eee;
+	background-color: #eee;
 }
 .table_highscore tr:nth-child(odd) {
-    background-color: #fff;
+	background-color: #fff;
 }
+/*
+#spielerRow1, #spielerRow2, #spielerRow3, #spielerRow4, #spielerRow5, #spielerRow6 {
+	visibility: hidden;
+}*/
 
 .footer {
 	width: auto;
 	height: 3%;
 	margin: 10px 20px;
-	border: 2px solid black; 
+	border: 2px solid black;
 	font-family: monospace;
 }

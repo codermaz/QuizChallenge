@@ -5,7 +5,6 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title> Quiz Challenge </title>
 		<link rel="stylesheet" type="text/css" href="CSS/Quiz.css">
-		<script src="JS/Quiz.js"></script>
 
 	</head>
 
@@ -42,8 +41,8 @@
 					<div class="right_up">
 						<h3> Catalogs </h3>
 						<table class="table_catalogs">
-							<tr>
-								<td> BeispielLangeLangeDateiname.cat </td>
+							<tr id="catalogR1">
+								<td > BeispielLangeLangeDateiname.cat </td>
 							</tr>
 							<tr>
 								<td> Beispiel2.cat </td>
@@ -61,29 +60,23 @@
 							<tr>
 								<th> Player </th><th> Score </th>
 							</tr>
-							<tr>
-								<td> Spieler1 </td><td> 100 </td>
+							<tr id="spielerRow1">
+								<td id="spieler1"> spieler1 </td><td id="score1"> 0 </td>
 							</tr>
-							<tr>
-								<td> Spieler2 </td><td> 70 </td>
+							<tr id="spielerRow2">
+								<td id="spieler2"> spieler2 </td><td id="score2"> 0 </td>
 							</tr>
-							<tr>
-								<td> Spieler1 </td><td> 100 </td>
+							<tr id="spielerRow3">
+								<td id="spieler3">  spieler3 </td><td id="score3"> 0 </td>
 							</tr>
-							<tr>
-								<td> Spieler2 </td><td> 70 </td>
+							<tr id="spielerRow4">
+								<td id="spieler4">  </td><td id="score4">  </td>
 							</tr>
-							<tr>
-								<td> Spieler1 </td><td> 100 </td>
+							<tr id="spielerRow5">
+								<td id="spieler5">  </td><td id="score5">  </td>
 							</tr>
-							<tr>
-								<td> Spieler2 </td><td> 70 </td>
-							</tr>
-							<tr>
-								<td> Spieler1 </td><td> 100 </td>
-							</tr>
-							<tr>
-								<td> Spieler2 </td><td> 70 </td>
+							<tr id="spielerRow6">
+								<td id="spieler6">  </td><td id="score6">  </td>
 							</tr>
 						</table>
 					</div></td>
@@ -95,6 +88,9 @@
 			</div>
 
 		</div>
+
+		<script src="JS/Quiz.js"></script>
+
 	</body>
 
 </html>
