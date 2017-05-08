@@ -2,120 +2,172 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
    
-      <title> Fragen </title>
-   </head>
+      <title> Fragen </title><style>
+                    div {
+                        max-width: 1000px;
+                        margin: auto;
+                        background-color: #EFF; 
+                    }
+                </style></head>
    <body>
-      <table>
-         <thead>
-            <tr>
-               <th> Frage </th>
-               <th> Dauer </th>
-               <th> A </th>
-               <th> B </th>
-               <th> C </th>
-               <th> D </th>
-            </tr>
-         </thead>
-         <tbody>
-            <tr>
-               <td>Ein Thread soll auf ein durch einen anderen Thread ausgel&ouml;stes Ereignis warten. Welcher Mechanismus ist geeignet?</td>
-               <td>30</td>
-               <td>nur Semaphore</td>
-               <td>nur Mutex</td>
-               <td>weder Semaphore noch Mutexe</td>
-               <td>sowohl Semaphore als auch Mutexe</td>
-            </tr>
-            <tr>
-               <td>Der Systemaufruf fork...</td>
-               <td>20</td>
-               <td>...erzeugt einen neuen Prozess, der das gleiche Programm ausf&uuml;hrt.</td>
-               <td>...erzeugt einen neuen Prozess, der ein anderes Programm ausf&uuml;hrt.</td>
-               <td>...erzeugt einen neuen Thread.</td>
-               <td>...ist das logische Gegenst&uuml;ck zum Aufruf knife.</td>
-            </tr>
-            <tr>
-               <td>In einem Signalhandler...</td>
-               <td>30</td>
-               <td>...d&uuml;rfen nur bestimmte Funktionen aufgerufen werden.</td>
-               <td>...kann man problemlos alles machen, was man auch im regul&auml;ren Programmcode macht.</td>
-               <td>...d&uuml;rfen keine Flie&szlig;kommaoperationen durchgef&uuml;hrt werden.</td>
-               <td>...ist nur der Systemaufruf write verboten.</td>
-            </tr>
-            <tr>
-               <td>Sie m&ouml;chten eine Datenstruktur vor gleichzeitigem Zugriff aus mehreren Threads sch&uuml;tzen. Welcher Mechanismus ist daf&uuml;r geeignet?</td>
-               <td>30</td>
-               <td>sowohl Semaphore als auch Mutexe</td>
-               <td>nur Semaphore</td>
-               <td>nur Mutexe</td>
-               <td>nur Signale</td>
-            </tr>
-            <tr>
-               <td>Es soll darauf gewartet werden, dass Daten eintreffen, allerdings nur eine bestimmte Zeit. Wie kann man das umsetzen?</td>
-               <td>30</td>
-               <td>mit dem Systemaufruf select</td>
-               <td>durch einen zus&auml;tzlichen Timeout-Parameter bei read oder recv</td>
-               <td>gar nicht</td>
-               <td>durch Setzen des Timeout-Status mit fcntl</td>
-            </tr>
-            <tr>
-               <td>Mit welchem Systemaufruf kann man den Port festlegen, auf dem ein Serverprogramm auf Verbindungen wartet?</td>
-               <td>30</td>
-               <td>bind</td>
-               <td>accept</td>
-               <td>setsock</td>
-               <td>open</td>
-            </tr>
-            <tr>
-               <td>W&auml;hrend eines read-Aufrufs tritt ein Signal auf und wird durch einen Signalhandler abgearbeitet (SA_RESTART nicht gesetzt).
-                  Was passiert?
-               </td>
-               <td>30</td>
-               <td>Der Aufruf kehrt unter Umst&auml;nden mit weniger Daten als angefordert oder EINTR zur&uuml;ck.</td>
-               <td>Es werden auf jeden Fall so viele Daten gelesen wie angefordert.</td>
-               <td>Die Daten gehen verloren.</td>
-               <td>Das Programm wird in solchen F&auml;llen vom Betriebssystem abgebrochen.</td>
-            </tr>
-            <tr>
-               <td>Beim Lesen aus einer Pipe meldet der Aufruf read das Dateiende, wenn...</td>
-               <td>20</td>
-               <td>...alle Schreib-Deskriptoren f&uuml;r die Pipe geschlossen und alle Daten aus der Pipe gelesen wurden.</td>
-               <td>...der Leser ein spezielles Signal erh&auml;lt.</td>
-               <td>...der schreibende Prozess fork aufruft.</td>
-               <td>...^D in die Pipe geschrieben wird.</td>
-            </tr>
-            <tr>
-               <td>Was passiert mit einem Shared-Memory-Objekt, wenn es nicht manuell gel&ouml;scht wird?</td>
-               <td>30</td>
-               <td>Es bleibt weiterhin bestehen, bis es von Hand oder durch einen Reboot gel&ouml;scht wurde.</td>
-               <td>Es wird zerst&ouml;rt, wenn sich der Prozess beendet, der es erzeugt hat.</td>
-               <td>Es wird zerst&ouml;rt, wenn kein Prozess mehr auf es zugreift.</td>
-               <td>Der Garbage-Collector des Betriebssystems zerst&ouml;rt es, wenn der Speicher knapp wird.</td>
-            </tr>
-            <tr>
-               <td>Welches dieser Signale kann nicht abgefangen werden?</td>
-               <td>30</td>
-               <td>SIGKILL</td>
-               <td>SIGTERM</td>
-               <td>SIGINT</td>
-               <td>SIGPIPE</td>
-            </tr>
-            <tr>
-               <td>Was ist ein Zombie-Prozess unter Unix?</td>
-               <td>30</td>
-               <td>Ein Prozess, dessen Exit-Status noch nicht mittels wait abgefragt wurde.</td>
-               <td>Ein Daemon-Prozess, der durch den Aufruf zombie immun gegen das KILL-Signal gemacht wurde.</td>
-               <td>Ein Prozess, der nur nachts gestartet werden kann.</td>
-               <td>Ein Computervirus.</td>
-            </tr>
-            <tr>
-               <td>Welches Signal (sofern nicht ignoriert) empf&auml;ngt ein Elternprozess, wenn sich einer seiner Kindprozesse beendet?</td>
-               <td>30</td>
-               <td>SIGCHLD</td>
-               <td>SIGSYS</td>
-               <td>SIGSEGV</td>
-               <td>SIGABRT</td>
-            </tr>
-         </tbody>
-      </table>
+      <div>
+         <h3><span style="color: blue"><em>Frage:</em></span>Ein Thread soll auf ein durch einen anderen Thread ausgel&ouml;stes Ereignis warten. Welcher Mechanismus ist geeignet?
+         </h3>
+         <p><span style="color: red"> &gt; </span>nur Semaphore
+         </p>
+         <p><span style="color: red"> &gt; </span>nur Mutex
+         </p>
+         <p><span style="color: red"> &gt; </span>weder Semaphore noch Mutexe
+         </p>
+         <p><span style="color: red"> &gt; </span>sowohl Semaphore als auch Mutexe
+         </p>
+         <h4><span style="color: blue"> Dauer: </span>30
+         </h4>
+         <hr>
+         <h3><span style="color: blue"><em>Frage:</em></span>Der Systemaufruf fork...
+         </h3>
+         <p><span style="color: red"> &gt; </span>...erzeugt einen neuen Prozess, der das gleiche Programm ausf&uuml;hrt.
+         </p>
+         <p><span style="color: red"> &gt; </span>...erzeugt einen neuen Prozess, der ein anderes Programm ausf&uuml;hrt.
+         </p>
+         <p><span style="color: red"> &gt; </span>...erzeugt einen neuen Thread.
+         </p>
+         <p><span style="color: red"> &gt; </span>...ist das logische Gegenst&uuml;ck zum Aufruf knife.
+         </p>
+         <h4><span style="color: blue"> Dauer: </span>20
+         </h4>
+         <hr>
+         <h3><span style="color: blue"><em>Frage:</em></span>In einem Signalhandler...
+         </h3>
+         <p><span style="color: red"> &gt; </span>...d&uuml;rfen nur bestimmte Funktionen aufgerufen werden.
+         </p>
+         <p><span style="color: red"> &gt; </span>...kann man problemlos alles machen, was man auch im regul&auml;ren Programmcode macht.
+         </p>
+         <p><span style="color: red"> &gt; </span>...d&uuml;rfen keine Flie&szlig;kommaoperationen durchgef&uuml;hrt werden.
+         </p>
+         <p><span style="color: red"> &gt; </span>...ist nur der Systemaufruf write verboten.
+         </p>
+         <h4><span style="color: blue"> Dauer: </span>30
+         </h4>
+         <hr>
+         <h3><span style="color: blue"><em>Frage:</em></span>Sie m&ouml;chten eine Datenstruktur vor gleichzeitigem Zugriff aus mehreren Threads sch&uuml;tzen. Welcher Mechanismus ist daf&uuml;r geeignet?
+         </h3>
+         <p><span style="color: red"> &gt; </span>sowohl Semaphore als auch Mutexe
+         </p>
+         <p><span style="color: red"> &gt; </span>nur Semaphore
+         </p>
+         <p><span style="color: red"> &gt; </span>nur Mutexe
+         </p>
+         <p><span style="color: red"> &gt; </span>nur Signale
+         </p>
+         <h4><span style="color: blue"> Dauer: </span>30
+         </h4>
+         <hr>
+         <h3><span style="color: blue"><em>Frage:</em></span>Es soll darauf gewartet werden, dass Daten eintreffen, allerdings nur eine bestimmte Zeit. Wie kann man das umsetzen?
+         </h3>
+         <p><span style="color: red"> &gt; </span>mit dem Systemaufruf select
+         </p>
+         <p><span style="color: red"> &gt; </span>durch einen zus&auml;tzlichen Timeout-Parameter bei read oder recv
+         </p>
+         <p><span style="color: red"> &gt; </span>gar nicht
+         </p>
+         <p><span style="color: red"> &gt; </span>durch Setzen des Timeout-Status mit fcntl
+         </p>
+         <h4><span style="color: blue"> Dauer: </span>30
+         </h4>
+         <hr>
+         <h3><span style="color: blue"><em>Frage:</em></span>Mit welchem Systemaufruf kann man den Port festlegen, auf dem ein Serverprogramm auf Verbindungen wartet?
+         </h3>
+         <p><span style="color: red"> &gt; </span>bind
+         </p>
+         <p><span style="color: red"> &gt; </span>accept
+         </p>
+         <p><span style="color: red"> &gt; </span>setsock
+         </p>
+         <p><span style="color: red"> &gt; </span>open
+         </p>
+         <h4><span style="color: blue"> Dauer: </span>30
+         </h4>
+         <hr>
+         <h3><span style="color: blue"><em>Frage:</em></span>W&auml;hrend eines read-Aufrufs tritt ein Signal auf und wird durch einen Signalhandler abgearbeitet (SA_RESTART nicht gesetzt).
+            Was passiert?
+         </h3>
+         <p><span style="color: red"> &gt; </span>Der Aufruf kehrt unter Umst&auml;nden mit weniger Daten als angefordert oder EINTR zur&uuml;ck.
+         </p>
+         <p><span style="color: red"> &gt; </span>Es werden auf jeden Fall so viele Daten gelesen wie angefordert.
+         </p>
+         <p><span style="color: red"> &gt; </span>Die Daten gehen verloren.
+         </p>
+         <p><span style="color: red"> &gt; </span>Das Programm wird in solchen F&auml;llen vom Betriebssystem abgebrochen.
+         </p>
+         <h4><span style="color: blue"> Dauer: </span>30
+         </h4>
+         <hr>
+         <h3><span style="color: blue"><em>Frage:</em></span>Beim Lesen aus einer Pipe meldet der Aufruf read das Dateiende, wenn...
+         </h3>
+         <p><span style="color: red"> &gt; </span>...alle Schreib-Deskriptoren f&uuml;r die Pipe geschlossen und alle Daten aus der Pipe gelesen wurden.
+         </p>
+         <p><span style="color: red"> &gt; </span>...der Leser ein spezielles Signal erh&auml;lt.
+         </p>
+         <p><span style="color: red"> &gt; </span>...der schreibende Prozess fork aufruft.
+         </p>
+         <p><span style="color: red"> &gt; </span>...^D in die Pipe geschrieben wird.
+         </p>
+         <h4><span style="color: blue"> Dauer: </span>20
+         </h4>
+         <hr>
+         <h3><span style="color: blue"><em>Frage:</em></span>Was passiert mit einem Shared-Memory-Objekt, wenn es nicht manuell gel&ouml;scht wird?
+         </h3>
+         <p><span style="color: red"> &gt; </span>Es bleibt weiterhin bestehen, bis es von Hand oder durch einen Reboot gel&ouml;scht wurde.
+         </p>
+         <p><span style="color: red"> &gt; </span>Es wird zerst&ouml;rt, wenn sich der Prozess beendet, der es erzeugt hat.
+         </p>
+         <p><span style="color: red"> &gt; </span>Es wird zerst&ouml;rt, wenn kein Prozess mehr auf es zugreift.
+         </p>
+         <p><span style="color: red"> &gt; </span>Der Garbage-Collector des Betriebssystems zerst&ouml;rt es, wenn der Speicher knapp wird.
+         </p>
+         <h4><span style="color: blue"> Dauer: </span>30
+         </h4>
+         <hr>
+         <h3><span style="color: blue"><em>Frage:</em></span>Welches dieser Signale kann nicht abgefangen werden?
+         </h3>
+         <p><span style="color: red"> &gt; </span>SIGKILL
+         </p>
+         <p><span style="color: red"> &gt; </span>SIGTERM
+         </p>
+         <p><span style="color: red"> &gt; </span>SIGINT
+         </p>
+         <p><span style="color: red"> &gt; </span>SIGPIPE
+         </p>
+         <h4><span style="color: blue"> Dauer: </span>30
+         </h4>
+         <hr>
+         <h3><span style="color: blue"><em>Frage:</em></span>Was ist ein Zombie-Prozess unter Unix?
+         </h3>
+         <p><span style="color: red"> &gt; </span>Ein Prozess, dessen Exit-Status noch nicht mittels wait abgefragt wurde.
+         </p>
+         <p><span style="color: red"> &gt; </span>Ein Daemon-Prozess, der durch den Aufruf zombie immun gegen das KILL-Signal gemacht wurde.
+         </p>
+         <p><span style="color: red"> &gt; </span>Ein Prozess, der nur nachts gestartet werden kann.
+         </p>
+         <p><span style="color: red"> &gt; </span>Ein Computervirus.
+         </p>
+         <h4><span style="color: blue"> Dauer: </span>30
+         </h4>
+         <hr>
+         <h3><span style="color: blue"><em>Frage:</em></span>Welches Signal (sofern nicht ignoriert) empf&auml;ngt ein Elternprozess, wenn sich einer seiner Kindprozesse beendet?
+         </h3>
+         <p><span style="color: red"> &gt; </span>SIGCHLD
+         </p>
+         <p><span style="color: red"> &gt; </span>SIGSYS
+         </p>
+         <p><span style="color: red"> &gt; </span>SIGSEGV
+         </p>
+         <p><span style="color: red"> &gt; </span>SIGABRT
+         </p>
+         <h4><span style="color: blue"> Dauer: </span>30
+         </h4>
+         <hr>
+      </div>
    </body>
 </html>

@@ -7,46 +7,36 @@
         <html>
             <head>
                 <title> Fragen </title>
+                <style>
+                    div {
+                        max-width: 1000px;
+                        margin: auto;
+                        background-color: #EFF; 
+                    }
+                </style>
+
             </head>
 
             <body>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th> Frage </th>
-                            <th> Dauer </th>
-                            <th> A </th>
-                            <th> B </th>
-                            <th> C </th>
-                            <th> D </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        <xsl:for-each select="question">
-                            <tr>
-                                <td>
-                                    <xsl:value-of select="issue"/>
-                                </td>
-                                <td>
-                                    <xsl:value-of select="timeout"/>
-                                </td>
-                                <xsl:for-each select="answer">
-
-                                    <td>
-                                        <xsl:value-of select="."/>
-                                    </td>
-                                </xsl:for-each>
-                            </tr>
-                        </xsl:for-each>
-
-
-                    </tbody>
-
-
-                </table>
-
+        <div>
+            
+                <xsl:for-each select="question">
+                    <h3> <span style="color: blue"> <em>Frage:</em> </span> 
+                    <xsl:value-of select="issue"/>
+                    </h3>
+                    <xsl:for-each select="answer">
+                        <p> <span style="color: red"> > </span>
+                            <xsl:value-of select="."/>
+                        </p>
+                    </xsl:for-each>
+                    <h4> <span style="color: blue"> Dauer: </span>  
+                    <xsl:value-of select="timeout"/>
+                    </h4>
+                        <hr/>
+                </xsl:for-each>
+            
+        </div>
             </body>
 
         </html>
