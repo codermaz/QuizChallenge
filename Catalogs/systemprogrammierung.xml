@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<catalog name="Systemprogrammierung">
+<catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="fragen_schema.xsd" name="Systemprogrammierung">
     <question>
         <issue>Ein Thread soll auf ein durch einen anderen Thread ausgelöstes Ereignis warten. Welcher Mechanismus ist geeignet?</issue>
         <answer flag="true">nur Semaphore</answer>
