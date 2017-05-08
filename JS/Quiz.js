@@ -16,7 +16,7 @@ function init() {
 
 	btnLogin.addEventListener("click", addSpieler, false);
 
-	//setInterval(laufText, 130);
+	setInterval(laufText, 130);
 }
 
 function laufText() {
@@ -24,7 +24,7 @@ function laufText() {
 	document.getElementById("scrollingTitel").innerHTML = aktuellText;
 	anfang++;
 	if (anfang == ende)
-		anfang = 0;2
+		anfang = 0;
 	aktuellText = "";
 }
 
@@ -36,14 +36,11 @@ function addSpieler() {
 		alert(" Fehler: Bitte schreiben Sie eine gültige Name! ");
 	else {
 		spielerAnzahl++;
-		var tableRow = document.getElementById("spielerRow" + (spielerAnzahl+1));
+		var tableRow = document.getElementById("spielerRow" + spielerAnzahl);
 		var cellList = tableRow.getElementsByTagName("td");
 		cellList[0].innerHTML= txtLogin ;
-		cellList[1].innerHTML=aktuellScore;
+		cellList[1].innerHTML= aktuellScore;
 		
-		
-		//document.getElementById("catalogR1").getElementsByTagName("td")[0].innerHTML=txtLogin;
-	
 		//tableN.style.visibility= "visible";
 
 	}
