@@ -3,7 +3,7 @@
  *
  */
 
-spielerAnzahl = 0;
+var spielerAnzahl = 0;
 
 var scrollingText = "| Web Quiz - Quiz Challenge "
 var anfang = 0,
@@ -16,7 +16,7 @@ function init() {
 
 	btnLogin.addEventListener("click", addSpieler, false);
 
-	setInterval(laufText, 130);
+	//setInterval(laufText, 130);
 }
 
 function laufText() {
@@ -24,7 +24,7 @@ function laufText() {
 	document.getElementById("scrollingTitel").innerHTML = aktuellText;
 	anfang++;
 	if (anfang == ende)
-		anfang = 0;
+		anfang = 0;2
 	aktuellText = "";
 }
 
@@ -38,10 +38,11 @@ function addSpieler() {
 		spielerAnzahl++;
 		var tableRow = document.getElementById("spielerRow" + (spielerAnzahl+1));
 		var cellList = tableRow.getElementsByTagName("td");
-		cellList[0].innerHTML="<td>" + txtLogin + "</td>";
-		cellList[1].innerHTML="<td>" + aktuellScore + "</td>";
+		cellList[0].innerHTML= txtLogin ;
+		cellList[1].innerHTML=aktuellScore;
 		
-		document.getElementById("catalogR1").getElementsByTagName("td")[0].innerHTML="<td>" + txtLogin + "</td>";
+		
+		//document.getElementById("catalogR1").getElementsByTagName("td")[0].innerHTML=txtLogin;
 	
 		//tableN.style.visibility= "visible";
 
