@@ -1,7 +1,10 @@
+
 /**
  * @author : Yilmaz
  *
  */
+
+window.document.addEventListener("DOMContentLoaded", init, false);
 
 var spielerAnzahl = 0;
 
